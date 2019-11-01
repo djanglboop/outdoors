@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+    <div class="place-background">
+        <%= image_tag @place.image_url %>
+        <div class="place_title">
+              <h2><%= @place.title %></h2>
+              <h3><%= @place.subtitle %></h3>
+        </div>      
+  </div>
+
+
+      <!-- Explore Block -->
+    
+<div class="place_about">
+    <p>
+       <%= @place.description %>
+    </p>
+    <h4><%= @place.smalltitle %></h4>
+    <p>
+    <%= @place.destination %>
+    </p>
+</div>
+
+
+<div class="nav_place_btn">
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %> |
+<%= link_to 'Delete', @place, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

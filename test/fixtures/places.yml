@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  subtitle: MyString
+  image_url: 191016_norway.jpg
+  description: MyText
+  smalltitle: MyString
+  destination: MyText
+
+two:
+  title: MyString
+  subtitle: MyString
+  image_url: 191016_norway.jpg
+  description: MyText
+  smalltitle: MyString
+  destination: MyText
+
+norway:
+  title: Geirangerfjord
+  subtitle: NORWAY
+  image_url: 191016_norway.jpg
+  description: The iconic Geirangerfjord is considered one of the most beautiful fjords in the world, and is included on the UNESCO World Heritage list together with the Nærøyfjord.
+  smalltitle: See it for yourself
+  destination: The best way to get close to the nature, see the famous waterfalls and learn about the history of the deserted fjord farms in Geiranger is by boat. Take a fjord sightseeing trip and experience it all. Or take the roads that twist and turn through one hairpin bend after another to Geiranger Skywalk- Mt. Dalsnibba, Flydalsjuvet and Ørnesvingen, to experience a fantastic, panoramic view of one of most beautiful tourist destinations in the world. 

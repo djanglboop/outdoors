@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Outdoors</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+     <nav>
+        <%= link_to 'ABOUT', root_path %>
+        <%= link_to 'EXPLORE', places_path %>
+        <%= image_tag "map_pin.svg" %>
+        <a href="#">JOURNAL</a>
+        <a href="#">SIGNUP</a>
+    </nav>
+
+    <%= yield %>
+
+    <footer>
+        &copy; 2019 THE GREAT OUTDOORS, by Yana Maximkina
+    </footer>
+  </body>
+</html>

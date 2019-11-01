@@ -1,0 +1,250 @@
+/* === Create new place form === */
+h1 {
+  max-width: 960px;
+  margin: 9% auto 4.5%;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  letter-spacing: 0.03em;
+  line-height: 2.5em;
+  border-bottom: 1px solid #fff;
+}
+
+.place_form_wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.field, .actions {
+    margin: 4%;
+}
+
+.field label {
+    margin: 1.3% 0;
+    font-size: 1.2em;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif; 
+}
+
+.form_area {
+    width: 45%;
+    height: 3.5vh;
+    opacity: .9;
+    color: #000000;
+    font-size: 1.2em;
+}
+
+.form_text_area {
+    width: 85%;
+    height: 25vh;
+    opacity: .9;
+    color: #000000;
+    font-size: 1.1em;
+}
+
+.place_submit_btn {
+    color: white;
+    font-size: 1.4em;
+    background-color: #bb0000;
+    border: #bb0000;
+    padding: 18px 0;
+    width: 240px;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+}
+/* === Create new place form === */
+
+.nav_place_btn {
+  max-width: 960px;
+  margin: 5% auto 9%;
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.nav_place_btn span {
+    margin: 0 2.5%;
+}
+
+/* === New place view === */
+
+.place-background {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}   
+
+.place-background img {
+    display: block;
+    width: 100%;
+    opacity: .7;
+  }
+
+
+.place_title {
+    position: absolute;
+    color: #fff;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 99;
+    width: 90%;
+}
+
+.place_title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 7.3vh;
+    letter-spacing: 0.02em;
+    line-height: 6.5vh;
+}
+
+.place_title h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 3.2vh;
+    letter-spacing: 0.1em;
+    font-weight: 100;
+}
+
+.place_about {
+    width: 75%;
+    margin: 7% auto 10%;
+}
+
+.place_about p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.05em;
+    letter-spacing: 0.03em;
+    line-height: 1.4em;
+}
+
+.place_about h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7em;
+    margin-top: 4%;
+}
+
+/* === Show all places === */
+.place_container {
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.place_child {
+    width: 48%;
+    margin: 5% 0;
+}
+
+.place_child img {
+    width: 100%;
+}
+
+.place_text_descript {
+    padding: 2% 3%;
+}
+
+.place_text_descript h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    letter-spacing: 0.03em;
+    line-height: .8em;
+}
+
+.place_text_descript h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+    line-height: .8em;
+}
+
+.place_text_descript p {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.3em;
+    margin-bottom: 13%;
+}
+
+.see_place_btn {
+    font-size: 1.2em;
+    letter-spacing: 0.04em;
+    border: 1px solid white;
+    padding: 18px 60px;
+    
+}
+
+.see_place_btn:hover {
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    -webkit-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+    opacity: .6;
+}
+
+@media screen and (max-width: 960px) {
+
+    .place-background {
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover cover;
+        overflow: hidden;
+        display: block;
+        width: auto;
+        height: 100vh;
+    }   
+    
+    .place-background img {
+        display: block;
+        width: auto;
+        height: 100vh;
+         transform: translate(-25%);
+      }
+    
+}
+
+@media screen and (max-width: 480px) {    
+    .place_title h2 {
+        font-size: 5.8vh;
+    }
+    
+    .place_title h3 {
+        font-size: 2.8vh;
+    }
+    
+    .place_about {
+        width: 75%;
+        margin: 22% auto 30%;
+    }
+    
+    .place_about p {
+        font-size: .85em;
+        line-height: 1.5em;
+    }
+    
+    .place_about h4 {
+        font-size: 1.6em;
+        margin-top: 20%;
+    }
+
+    .place_child {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+}

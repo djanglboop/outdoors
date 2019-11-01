@@ -1,0 +1,51 @@
+<div class="place_form_wrap">
+
+<%= form_for @place do |form| %>
+  <% if place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+        <% place.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form_text_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :smalltitle %>
+    <%= form.text_field :smalltitle, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destination %>
+    <%= form.text_area :destination, class: "form_text_area" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "place_submit_btn" %>
+  </div>
+<% end %>
+
+</div>

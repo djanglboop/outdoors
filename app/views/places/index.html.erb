@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Places</h1>
+
+<div class="place_container">
+  <% @places.each do |place| %>
+    <div class="place_child">
+        <%= image_tag place.image_url %>
+        <div class="place_text_descript">
+            <h2><%= place.title %></h2>
+            <h3><%= place.subtitle %></h3>
+            <p>
+            <%= truncate(strip_tags(place.description), length: 200) %>
+            </p>
+            <%= link_to 'SEE MORE', place_path(place), class: "see_place_btn" %>
+        </div>
+    </div>
+  <% end %>  
+</div>    
+
+<br>
+
+<div class="nav_place_btn">
+<%= link_to 'New Place', new_place_path %>
+</div>
