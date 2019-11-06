@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_16_084345) do
+ActiveRecord::Schema.define(version: 2019_11_05_071635) do
+
+  create_table "journals", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.string "image_url"
+    t.text "description"
+    t.string "image"
+    t.string "smalltitle_01"
+    t.text "description_01"
+    t.string "image_01"
+    t.string "smalltitle_02"
+    t.text "description_02"
+    t.string "image_02"
+    t.string "smalltitle_03"
+    t.text "description_03"
+    t.string "image_03"
+    t.string "smalltitle_04"
+    t.text "description_04"
+    t.string "image_04"
+    t.string "smalltitle_05"
+    t.text "description_05"
+    t.string "image_05"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "places", force: :cascade do |t|
     t.string "title"

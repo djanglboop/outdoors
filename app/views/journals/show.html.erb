@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<div class="blog_main_picture">
+    <%= image_tag @journal.image_url %>
+</div>
+
+<div class="blog_wrapper">
+    <div class="blog_title">
+    <h1><%= @journal.title %></h1>
+    <h2><%= @journal.subtitle %></h2>
+</div>
+
+<p><%= sanitize(@journal.description) %></p>
+
+<div class="blog_sub_picture">
+    <%= image_tag @journal.image %>
+</div>
+
+<h3><%= @journal.smalltitle_01 %></h3>
+<p><%= sanitize(@journal.description_01) %></p>
+<div class="blog_sub_picture">
+    <%= image_tag @journal.image_01 %>
+</div>
+
+<h3><%= @journal.smalltitle_02 %></h3>
+<p><%= sanitize(@journal.description_02) %></p>
+<div class="blog_sub_picture">
+    <%= image_tag @journal.image_02 %>
+</div>
+
+<h3><%= @journal.smalltitle_03 %></h3>
+<p><%= sanitize(@journal.description_03) %></p>
+<div class="blog_sub_picture">
+    <%= image_tag @journal.image_03 %>
+</div>
+
+<h3><%= @journal.smalltitle_04 %></h3>
+<p><%= sanitize(@journal.description_04) %></p>
+<div class="blog_sub_picture">
+    <%= image_tag @journal.image_04 %>
+</div>
+
+<h3><%= @journal.smalltitle_05 %></h3>
+<p><%= sanitize(@journal.description_05) %></p>
+<div class="blog_sub_picture">
+    <%= image_tag @journal.image_05 %>
+</div>
+
+<p class="author_capture">
+    By: *author
+</p>
+
+</div>
+
+<div class="nav_place_btn">
+<%= link_to 'Edit', edit_journal_path(@journal) %> |
+<%= link_to 'Back', journals_path %> |
+<%= link_to 'Delete', @journal, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

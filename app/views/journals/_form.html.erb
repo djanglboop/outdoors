@@ -1,0 +1,117 @@
+<%= form_with(model: journal, local: true) do |form| %>
+  <% if journal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(journal.errors.count, "error") %> prohibited this journal from being saved:</h2>
+
+      <ul>
+        <% journal.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form_text_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :smalltitle_01 %>
+    <%= form.text_field :smalltitle_01, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description_01 %>
+    <%= form.text_area :description_01, class: "form_text_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_01 %>
+    <%= form.text_field :image_01, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :smalltitle_02 %>
+    <%= form.text_field :smalltitle_02, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description_02 %>
+    <%= form.text_area :description_02, class: "form_text_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_02 %>
+    <%= form.text_field :image_02, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :smalltitle_03 %>
+    <%= form.text_field :smalltitle_03, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description_03 %>
+    <%= form.text_area :description_03, class: "form_text_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_03 %>
+    <%= form.text_field :image_03, class: "form_area" %>
+  </div>
+
+    <div class="field">
+    <%= form.label :smalltitle_04 %>
+    <%= form.text_field :smalltitle_04, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description_04 %>
+    <%= form.text_area :description_04, class: "form_text_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_04 %>
+    <%= form.text_field :image_04, class: "form_area" %>
+  </div>
+
+    <div class="field">
+    <%= form.label :smalltitle_05 %>
+    <%= form.text_field :smalltitle_05, class: "form_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description_05 %>
+    <%= form.text_area :description_05, class: "form_text_area" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_05 %>
+    <%= form.text_field :image_05, class: "form_area" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "place_submit_btn" %>
+  </div>
+<% end %>

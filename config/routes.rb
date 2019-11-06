@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :journals
   resources :places
   get 'main/home'
   root 'main#home' 
