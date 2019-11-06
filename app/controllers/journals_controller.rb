@@ -25,7 +25,7 @@ class JournalsController < ApplicationController
   # POST /journals.json
   def create
     @journal = Journal.new(journal_params)
-
+    @journal.user = User.first
     respond_to do |format|
       if @journal.save
         format.html { redirect_to @journal, notice: 'Journal was successfully created.' }

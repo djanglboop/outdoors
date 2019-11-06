@@ -47,7 +47,7 @@
 </div>
 
 <p class="author_capture">
-    By: *author
+    By: <%= @journal.user.username if @journal.user %>
 </p>
 
 </div>
