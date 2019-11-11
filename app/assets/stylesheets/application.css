@@ -55,15 +55,15 @@ nav a {
     font-family: 'Lato', sans-serif;
     font-size: 1.2em;
     letter-spacing: 0.05em;
-    line-height: 1.6em;
+    line-height: 3.2em;
     color: white;
-    margin: 0 5%;
+    margin: 5%;
 
 }
 
 nav img {
     width: 2vw;
-    margin: 0 5%;
+    margin: -1% 5%;
     top: 50%;
 }
 

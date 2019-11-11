@@ -1,0 +1,20 @@
+<div class="place_container">
+  <% obj.each do |journal| %>
+    <div class="place_child">
+        <%= image_tag journal.image_url %>
+        <div class="place_text_descript">
+            <h2><%= journal.title %></h2>
+            <p>
+            <%= truncate(strip_tags(journal.description), length: 200) %>
+            </p>
+            <%= link_to 'SEE MORE', journal_path(journal), class: "see_place_btn" %>
+        </div>
+    </div>
+  <% end %>  
+</div>    
+
+<br>
+
+<div class="nav_place_btn">
+<%= link_to 'New Journal', new_journal_path %>
+</div>

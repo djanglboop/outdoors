@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def index
+    redirect_to journals_path
+  end
+
     def show
       @user = User.find(params[:id])
     end

@@ -1,0 +1,14 @@
+<div class="profile_wrapper">
+<!-- 
+<div class="profile_pic">
+    <img src="img/profile.jpg" alt="">
+</div> -->
+
+<div class="profile_title">
+    <h1><%= @user.username %></h1>
+    <h2>My Journals</h2>
+</div>
+
+<%= render 'journals/journal', obj: @user.journals %>
+
+</div>
