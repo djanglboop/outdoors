@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <div class="profile_wrapper">
 <!-- 
 <div class="profile_pic">
@@ -7,6 +9,12 @@
 <div class="profile_title">
     <h1><%= @user.username %></h1>
     <h2>My Journals</h2>
+</div>
+
+<div class="nav_place_btn">
+<%= link_to 'Edit', edit_user_path(current_user) %> |
+<%= link_to 'Back', root_path %> |
+<%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
 
 <%= render 'journals/journal', obj: @user.journals %>

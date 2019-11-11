@@ -1,0 +1,28 @@
+<div class="place_form_wrap">
+
+<h1 style="margin: 17% auto 10%">Log in</h1>
+
+
+<%= form_for(:session, url: login_path) do |form| %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form_area", placeholder: "Enter email", autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password, class: "form_area", placeholder: "Enter password" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Log in", class: "place_submit_btn" %>
+  </div>
+
+<% end %>
+
+<div class="nav_place_btn">
+<%= link_to 'Back', root_path %>
+</div>
+
+</div>
