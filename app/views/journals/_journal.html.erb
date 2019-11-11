@@ -2,10 +2,16 @@
   <% obj.each do |journal| %>
     <div class="place_child">
         <%= image_tag journal.image_url %>
+        <p>
+          <strong><%= journal.created_at.to_date %></strong>
+        </p>
         <div class="place_text_descript">
             <h2><%= journal.title %></h2>
             <p>
             <%= truncate(strip_tags(journal.description), length: 200) %>
+            </p>
+            <p>
+            <small>By: <%= journal.user.username if journal.user %></small>
             </p>
             <%= link_to 'SEE MORE', journal_path(journal), class: "see_place_btn" %>
         </div>

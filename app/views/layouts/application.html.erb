@@ -15,9 +15,13 @@
         <%= link_to 'EXPLORE', places_path %>
         <%= image_tag "map_pin.svg" %>
         <%= link_to 'JOURNAL', journals_path %>
-        <%= link_to 'SIGNUP', signup_path %><br>
-        <%= link_to 'LOGIN', login_path %>
-        <%= link_to 'LOG OUT', logout_path, method: :delete %>
+        <% if logged_in? %>
+        <%= link_to 'LOG OUT', logout_path, method: :delete %><br>
+        <%= link_to 'PROFILE', user_path(current_user) %>
+        <% else %>
+          <%= link_to 'SIGNUP', signup_path %><br>
+          <%= link_to 'LOGIN', login_path %>  
+        <% end %>
     </nav>
  
 

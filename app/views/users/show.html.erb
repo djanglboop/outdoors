@@ -12,9 +12,11 @@
 </div>
 
 <div class="nav_place_btn">
+<% if logged_in? && current_user %>
 <%= link_to 'Edit', edit_user_path(current_user) %> |
-<%= link_to 'Back', root_path %> |
-<%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %>
+<%= link_to 'Back', root_path %>
 </div>
 
 <%= render 'journals/journal', obj: @user.journals %>

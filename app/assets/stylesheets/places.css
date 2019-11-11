@@ -152,7 +152,7 @@ h1 {
 }
 
 .place_text_descript {
-    padding: 2% 3%;
+    padding: .5% 3%;
 }
 
 .place_text_descript h2 {
@@ -175,7 +175,7 @@ h1 {
     text-align: left;
     font-size: 1em;
     line-height: 1.3em;
-    margin-bottom: 13%;
+    margin-bottom: 10%;
 }
 
 .see_place_btn {
