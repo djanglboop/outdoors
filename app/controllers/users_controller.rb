@@ -23,7 +23,8 @@ class UsersController < ApplicationController
     
         respond_to do |format|
           if @user.save
-            format.html { redirect_to root_path, notice: 'You was successfully signed up' }
+            session[:user_id] = @user.id
+            format.html { redirect_to user_path(@user), notice: 'You was successfully signed up' }
             format.json { render :show, status: :created, location: @user }
           else
             puts @user.errors.full_messages
