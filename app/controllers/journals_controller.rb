@@ -21,6 +21,7 @@ class JournalsController < ApplicationController
 
   # GET /journals/1/edit
   def edit
+    @journal = Journal.find(params[:id])
   end
 
   # POST /journals
@@ -75,10 +76,9 @@ class JournalsController < ApplicationController
     end
 
     def require_same_user
-      respond_to do |format|
-        if current_user != @article.user
-          format.html { redirect_to root_path, notice: 'You can only edit or delete your own articles' }
-        end
+      if current_user != @journal.user and !current_user.admin?
+        flash[:danger] = "You can only edit or delete your own articles"
+        redirect_to root_path  
       end
     end
 end

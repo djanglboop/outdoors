@@ -14,10 +14,9 @@ class ApplicationController < ActionController::Base
     end
 
     def require_user
-      respond_to do |format|
-        if !logged_in?
-            format.html { redirect_to root_path, notice: 'You must be logged in to perform that action' }
-        end
+      if !logged_in?    
+      flash[:danger] = "You must be logged in to perform that action"
+      redirect_to root_path 
       end
     end
 

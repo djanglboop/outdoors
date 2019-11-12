@@ -53,7 +53,7 @@
 </div>
 
 <div class="nav_place_btn">
-<% if logged_in? && current_user == @journal.user %>
+<% if logged_in? && (current_user == @journal.user || current_user.admin?) %>
     <%= link_to 'Edit', edit_journal_path(@journal) %> |
     <%= link_to 'Delete', @journal, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <% end %>
