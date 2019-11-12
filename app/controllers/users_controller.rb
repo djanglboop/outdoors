@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only:[:edit, :update, :show]
+  before_action :require_same_user, only: [:edit, :update]
 
   def index
     redirect_to journals_path
@@ -54,6 +55,15 @@ class UsersController < ApplicationController
 
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def require_same_user
+      respond_to do |format|
+        if @current_user != @user
+          format.html { redirect_to root_path, notice: 'You can only edit your own account' }
+          format.json { render :home, status: :unprocessable_entity }
+        end
+      end
     end
 
 end

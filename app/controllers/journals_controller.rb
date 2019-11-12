@@ -1,5 +1,7 @@
 class JournalsController < ApplicationController
   before_action :set_journal, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   # GET /journals
   # GET /journals.json
@@ -70,5 +72,13 @@ class JournalsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def journal_params
       params.require(:journal).permit(:title, :subtitle, :image_url, :description, :image, :smalltitle_01, :description_01, :image_01, :smalltitle_02, :description_02, :image_02, :smalltitle_03, :description_03, :image_03, :smalltitle_04, :description_04, :image_04, :smalltitle_05, :description_05, :image_05)
+    end
+
+    def require_same_user
+      respond_to do |format|
+        if current_user != @article.user
+          format.html { redirect_to root_path, notice: 'You can only edit or delete your own articles' }
+        end
+      end
     end
 end
