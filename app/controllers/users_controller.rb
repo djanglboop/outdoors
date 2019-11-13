@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only:[:edit, :update, :show]
   before_action :require_same_user, only: [:edit, :update]
+  before_action :require_admin, only: [:destroy]
 
   def index
     redirect_to journals_path
@@ -64,6 +65,13 @@ class UsersController < ApplicationController
           format.html { redirect_to root_path, notice: 'You can only edit your own account' }
           format.json { render :home, status: :unprocessable_entity }
         end
+      end
+    end
+
+    def require_admin
+      if logged_in? and !current_user.admin?
+        flash[:danger] = "Only admin users can perform that action"
+        redirect_to root_path
       end
     end
 
